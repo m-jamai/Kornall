@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing | kornall</title>
+<meta name="description" content="kornall pricing: Personal at €27 a year or €2.80 a month for up to 2 PCs, Business packs of 100, 200 or 300 licences, Enterprise on request. 7-day free trial.">
+<meta name="theme-color" content="#123B45">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pricing | kornall">
+<meta property="og:description" content="kornall pricing: Personal at €27 a year or €2.80 a month for up to 2 PCs, Business packs of 100, 200 or 300 licences, Enterprise on request. 7-day free trial.">
+<meta property="og:image" content="https://[YOUR-GITHUB-NAME].github.io/kornall-website/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' rx='8' fill='%23123B45'/%3E%3Crect x='28' y='92' width='40' height='40' fill='%23C27A4A'/%3E%3Cpath d='M28 68H92V132M28 36H124V132' fill='none' stroke='%23DCE6E4' stroke-width='16'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+</head>
+<body data-page="pricing">
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar" role="note"><strong>Demo website.</strong> Purchases, payments and downloads are simulated. Nothing is charged.</div>
+<header class="site-header">
+<div class="wrap">
+<nav class="nav" aria-label="Main">
+<a class="brand" href="index.html"><svg width="30" height="30" viewBox="0 0 160 160" aria-hidden="true" focusable="false"><rect width="160" height="160" rx="4" fill="#123B45"/><rect x="34" y="94" width="32" height="32" fill="#C27A4A"/><path d="M34 79H81V126M34 59H101V126M34 39H121V126" fill="none" stroke="#DCE6E4" stroke-width="10"/></svg><span>kornall</span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+<ul class="nav-links" id="nav-links"><li><a href="index.html">Features</a></li><li><a href="pricing.html" aria-current="page">Pricing</a></li><li><a href="download.html">Download</a></li><li><a href="index.html#faq">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul>
+<div class="nav-actions">
+<a class="btn btn-ghost" href="account.html">Account</a>
+<a class="btn btn-copper" href="trial.html">Start 7-day trial</a>
+</div>
+</nav>
+</div>
+</header>
+<main id="main">
+
+<section class="wrap page-head">
+<h1>Pricing</h1>
+<p>Every plan includes every feature. Start with a free 7-day trial, no card needed.</p>
+</section>
+<section class="wrap" aria-label="Plans" style="padding-bottom:56px">
+<div class="billing" role="group" aria-label="Billing period">
+<button type="button" data-billing="year" aria-pressed="true">Yearly <span class="save">save 20%</span></button>
+<button type="button" data-billing="month" aria-pressed="false">Monthly</button>
+</div>
+<div class="plans">
+<article class="plan featured">
+<div class="plan-top"><h3>Personal</h3><span class="pill">Most chosen</span></div>
+<p class="who">One person, up to 2 PCs</p>
+<p class="price" id="personal-price">€27<small> / year</small></p>
+<p class="note" id="personal-note">That is €2.25 a month, billed once a year</p>
+<a class="btn btn-copper btn-block" id="personal-buy" href="checkout.html?plan=personal&amp;billing=year">Buy Personal</a>
+<p class="under">Or <a href="trial.html">try it free for 7 days</a>, no card needed</p>
+</article>
+<article class="plan">
+<h3>Business</h3>
+<p class="who">Licence packs for teams</p>
+<div class="seats" role="group" aria-label="Number of licences">
+<button type="button" data-seats="100" aria-pressed="true">100 seats</button>
+<button type="button" data-seats="200" aria-pressed="false">200 seats</button>
+<button type="button" data-seats="300" aria-pressed="false">300 seats</button>
+</div>
+<p class="price" id="business-price">€24.00<small> / seat / year</small></p>
+<p class="note"><span id="business-note">100 licences: €2,400.00 a year, excluding VAT</span><span class="example">Example price</span></p>
+<a class="btn btn-line btn-block" id="business-buy" href="checkout.html?plan=business&amp;seats=100">Buy 100 licences</a>
+<p class="under">Invoice with your company VAT number</p>
+</article>
+<article class="plan">
+<h3>Enterprise</h3>
+<p class="who">More than 300 seats or specific needs</p>
+<p class="price">On request</p>
+<p class="note">Custom volume, deployment help, contract terms</p>
+<a class="btn btn-line btn-block" href="contact.html?topic=enterprise">Contact sales</a>
+<p class="under">Answer within <span class="ph">[2]</span> business days</p>
+</article>
+</div>
+<p class="small muted" style="margin-top:16px">Prices in euros. Personal prices include VAT; Business prices exclude VAT.</p>
+</section>
+<section class="wrap" aria-labelledby="compare-title" style="padding-bottom:88px">
+<h2 id="compare-title" style="margin-bottom:20px">Compare plans</h2>
+<div class="table-box" tabindex="0" role="region" aria-label="Plan comparison table">
+<table class="compare">
+<thead><tr><th scope="col" style="width:38%">Feature</th><th scope="col">Personal</th><th scope="col">Business</th><th scope="col">Enterprise</th></tr></thead>
+<tbody><tr><th scope="row">Workspace map and tree editor</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Structured numbering (01.01, A.01)</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Duplicate and version detection</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">WDS report and PDF export</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Saved states and comparison</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Review, history and undo</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Computers</th><td>2 per licence</td><td>1 per seat</td><td>As agreed</td></tr><tr><th scope="row">Team licence management</th><td>—</td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Invoice</th><td>Personal</td><td>Company, with VAT number</td><td>Company, contract</td></tr><tr><th scope="row">Payment</th><td>Card, PayPal</td><td>Card, PayPal, bank transfer</td><td>Bank transfer, purchase order</td></tr><tr><th scope="row">Support</th><td>Email</td><td>Priority email</td><td>Dedicated contact</td></tr></tbody>
+</table>
+</div>
+</section>
+<section class="section section-alt" aria-labelledby="pfaq-title">
+<div class="wrap" style="max-width:860px">
+<h2 id="pfaq-title" style="margin-bottom:28px">Pricing questions</h2>
+<div class="faq"><details open><summary>How does the trial work?</summary><p>Install kornall and use every feature for 7 days. No card, no automatic payment. When the trial ends, choose a plan to continue.</p></details><details><summary>How do I cancel?</summary><p>From your account, in one click. Monthly plans stop at the end of the paid month, yearly plans at the end of the paid year. No further payment is taken.</p></details><details><summary>Can I switch from monthly to yearly?</summary><p>Yes, from your account. The yearly price applies from your next renewal.</p></details><details><summary>Do prices include VAT?</summary><p>Personal prices include VAT. Business prices exclude VAT; EU companies outside France with a valid VAT number are invoiced without VAT (reverse charge).</p></details><details><summary>Who processes payments?</summary><p><span class="ph">[PAYMENT PROVIDER]</span> processes payments and sends invoices. kornall never sees or stores your card details.</p></details><details><summary>Can I get a refund?</summary><p>Refund and withdrawal conditions are set out in the <a href="terms.html">terms of sale</a>.</p></details></div>
+</div>
+</section>
+
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-brand"><svg width="24" height="24" viewBox="0 0 160 160" aria-hidden="true" focusable="false"><rect width="160" height="160" rx="4" fill="#1B4C57"/><rect x="34" y="94" width="32" height="32" fill="#C27A4A"/><path d="M34 79H81V126M34 59H101V126M34 39H121V126" fill="none" stroke="#DCE6E4" stroke-width="10"/></svg><strong>kornall</strong><span>© <span data-year>2026</span> <span class="ph">[COMPANY NAME]</span></span></div>
+<nav aria-label="Legal and contact">
+<ul>
+<li><a href="legal.html">Legal notice</a></li>
+<li><a href="terms.html">Terms of sale</a></li>
+<li><a href="eula.html">Licence agreement</a></li>
+<li><a href="privacy.html">Privacy</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+<div class="foot-note">No cookies, no trackers, no analytics on this site. Fonts are served from this site.</div>
+</footer>
+</body>
+</html>

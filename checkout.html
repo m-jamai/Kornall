@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout | kornall</title>
+<meta name="description" content="Demo checkout for kornall.">
+<meta name="theme-color" content="#123B45">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Checkout | kornall">
+<meta property="og:description" content="Demo checkout for kornall.">
+<meta property="og:image" content="https://[YOUR-GITHUB-NAME].github.io/kornall-website/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' rx='8' fill='%23123B45'/%3E%3Crect x='28' y='92' width='40' height='40' fill='%23C27A4A'/%3E%3Cpath d='M28 68H92V132M28 36H124V132' fill='none' stroke='%23DCE6E4' stroke-width='16'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+</head>
+<body data-page="checkout">
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar" role="note"><strong>Demo website.</strong> Purchases, payments and downloads are simulated. Nothing is charged.</div>
+<header class="site-header">
+<div class="wrap">
+<nav class="nav" aria-label="Main">
+<a class="brand" href="index.html"><svg width="30" height="30" viewBox="0 0 160 160" aria-hidden="true" focusable="false"><rect width="160" height="160" rx="4" fill="#123B45"/><rect x="34" y="94" width="32" height="32" fill="#C27A4A"/><path d="M34 79H81V126M34 59H101V126M34 39H121V126" fill="none" stroke="#DCE6E4" stroke-width="10"/></svg><span>kornall</span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+<ul class="nav-links" id="nav-links"><li><a href="index.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="download.html">Download</a></li><li><a href="index.html#faq">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul>
+<div class="nav-actions">
+<a class="btn btn-ghost" href="account.html">Account</a>
+<a class="btn btn-copper" href="trial.html">Start 7-day trial</a>
+</div>
+</nav>
+</div>
+</header>
+<main id="main">
+
+<section class="wrap page-head">
+<p style="margin:0 0 6px"><a href="pricing.html">Back to pricing</a></p>
+<h1 id="plan-title">kornall Personal</h1>
+<p>Secure checkout. In this demo, no payment is made and nothing leaves your browser.</p>
+</section>
+<div class="wrap flow">
+<form id="checkout-form" novalidate aria-labelledby="plan-title">
+<div class="notice notice-copper" style="margin-bottom:24px"><strong>Demo checkout.</strong> Do not enter real card details. Use the test card <span class="mono">4242 4242 4242 4242</span>, any future date and any 3 digits. The card <span class="mono">4000 0000 0000 0002</span> shows a declined payment.</div>
+
+<fieldset>
+<legend>Your details</legend>
+<div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="email" placeholder="name@company.com" aria-describedby="email-hint"><span class="hint" id="email-hint">Your licence key and invoice are sent here.</span><span class="err" aria-live="polite"></span></div>
+<div class="field"><label for="full-name">Full name</label><input id="full-name" type="text" autocomplete="name"><span class="err" aria-live="polite"></span></div>
+<div class="row2">
+<div class="field" data-biz hidden><label for="company">Company</label><input id="company" type="text" autocomplete="organization"><span class="err" aria-live="polite"></span></div>
+<div class="field" data-biz hidden><label for="vat-id">VAT number <span class="muted">(optional)</span></label><input id="vat-id" type="text" placeholder="FR12345678901" autocomplete="off"><span class="err" aria-live="polite"></span></div>
+</div>
+<div class="field"><label for="country">Country</label><select id="country" autocomplete="country"><option value="">Choose a country</option><option value="FR" selected>France</option><option value="BE">Belgium</option><option value="LU">Luxembourg</option><option value="DE">Germany</option><option value="ES">Spain</option><option value="IT">Italy</option><option value="NL">Netherlands</option><option value="PT">Portugal</option><option value="IE">Ireland</option><option value="AT">Austria</option><option value="SE">Sweden</option><option value="PL">Poland</option><option value="CH">Switzerland</option><option value="GB">United Kingdom</option><option value="CA">Canada</option><option value="US">United States</option><option value="MA">Morocco</option><option value="TN">Tunisia</option><option value="DZ">Algeria</option><option value="SN">Senegal</option></select><span class="err" aria-live="polite"></span></div>
+</fieldset>
+
+<fieldset>
+<legend>Payment method</legend>
+<div class="choice">
+<label><input type="radio" name="method" value="card" checked> Card <span class="right">Visa, Mastercard, CB</span></label>
+<label><input type="radio" name="method" value="paypal"> PayPal</label>
+<label data-biz hidden><input type="radio" name="method" value="transfer"> Bank transfer <span class="right">Licences active on receipt</span></label>
+</div>
+</fieldset>
+
+<div data-method="card">
+<div class="field"><label for="card-name">Name on card</label><input id="card-name" type="text" autocomplete="off"><span class="err" aria-live="polite"></span></div>
+<div class="card-row">
+<div class="field"><label for="card-number">Card number</label><input id="card-number" type="text" inputmode="numeric" autocomplete="off" placeholder="4242 4242 4242 4242"><span class="err" aria-live="polite"></span></div>
+<div class="field"><label for="card-exp">Expiry</label><input id="card-exp" type="text" inputmode="numeric" autocomplete="off" placeholder="MM / YY"><span class="err" aria-live="polite"></span></div>
+<div class="field"><label for="card-cvc">CVC</label><input id="card-cvc" type="text" inputmode="numeric" autocomplete="off" placeholder="123" maxlength="4"><span class="err" aria-live="polite"></span></div>
+</div>
+</div>
+<div data-method="paypal" hidden><p class="notice" style="margin-bottom:20px">After you confirm, you would be sent to PayPal to approve the payment. In this demo, the approval is simulated.</p></div>
+<div data-method="transfer" hidden><p class="notice" style="margin-bottom:20px">You receive an invoice with our bank details. Your licences are activated as soon as the transfer arrives, usually within 1 to 3 business days.</p></div>
+
+<fieldset style="margin-top:8px">
+<legend class="sr-only">Agreements</legend>
+<div class="check"><input id="accept-terms" type="checkbox"><label for="accept-terms">I accept the <a href="terms.html">terms of sale</a> and the <a href="eula.html">licence agreement</a>.</label><span class="err" aria-live="polite"></span></div>
+<div class="check" data-personal><input id="accept-waiver" type="checkbox"><label for="accept-waiver">I want my licence immediately and understand that I lose my 14-day right of withdrawal once it is activated.</label><span class="err" aria-live="polite"></span></div>
+</fieldset>
+
+<p class="notice" id="form-error" role="alert" hidden style="background:var(--danger-soft);color:var(--danger);border-color:#efc9c5;margin-bottom:16px"></p>
+<button class="btn btn-copper btn-block" type="submit" style="min-height:52px;font-size:17px">Pay <span id="pay-amount">€27.00</span></button>
+<p class="secure"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" style="width:16px;height:16px"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg> Payments would be processed by <span class="ph">[PAYMENT PROVIDER]</span>. kornall never stores card details.</p>
+</form>
+
+<aside class="summary" aria-label="Order summary">
+<div class="panel">
+<div class="panel-head">Order summary</div>
+<div class="panel-body">
+<p style="font-weight:600" id="sum-label">kornall Personal</p>
+<p class="small muted" id="sum-detail" style="margin-bottom:16px"></p>
+<div class="field" data-personal><label for="sum-billing">Billing</label><select id="sum-billing"><option value="year">Yearly, €27 (save 20%)</option><option value="month">Monthly, €2.80</option></select></div>
+<div class="field" data-biz hidden><label for="sum-seats">Licences</label><select id="sum-seats"><option value="100">100 seats</option><option value="200">200 seats</option><option value="300">300 seats</option></select></div>
+<table class="lines">
+<tbody>
+<tr class="sub"><td>Subtotal excluding VAT</td><td id="sum-net"></td></tr>
+<tr class="sub"><td id="sum-vat-label">VAT</td><td id="sum-vat"></td></tr>
+<tr class="total"><td>Total today</td><td id="sum-total"></td></tr>
+</tbody>
+</table>
+<p class="small muted" id="sum-recurring" style="margin-top:10px"></p>
+</div>
+</div>
+<ul class="ticks small" style="margin-top:20px"><li>Licence key by email right after payment</li><li>Cancel anytime from your account</li><li>Invoice available in your account</li></ul>
+</aside>
+</div>
+<div class="overlay" id="processing" hidden role="dialog" aria-modal="true" aria-labelledby="proc-title">
+<div class="dialog"><div class="panel-body" style="text-align:center;padding:36px 24px"><div class="spinner" aria-hidden="true"></div><p id="proc-title" style="font-weight:600">Processing your payment</p><p class="small muted">Demo: no money is moved.</p></div></div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-brand"><svg width="24" height="24" viewBox="0 0 160 160" aria-hidden="true" focusable="false"><rect width="160" height="160" rx="4" fill="#1B4C57"/><rect x="34" y="94" width="32" height="32" fill="#C27A4A"/><path d="M34 79H81V126M34 59H101V126M34 39H121V126" fill="none" stroke="#DCE6E4" stroke-width="10"/></svg><strong>kornall</strong><span>© <span data-year>2026</span> <span class="ph">[COMPANY NAME]</span></span></div>
+<nav aria-label="Legal and contact">
+<ul>
+<li><a href="legal.html">Legal notice</a></li>
+<li><a href="terms.html">Terms of sale</a></li>
+<li><a href="eula.html">Licence agreement</a></li>
+<li><a href="privacy.html">Privacy</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+<div class="foot-note">No cookies, no trackers, no analytics on this site. Fonts are served from this site.</div>
+</footer>
+</body>
+</html>

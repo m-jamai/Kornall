@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your account | kornall</title>
+<meta name="description" content="Demo customer account for kornall: subscription, licence key, devices, invoices.">
+<meta name="theme-color" content="#123B45">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Your account | kornall">
+<meta property="og:description" content="Demo customer account for kornall: subscription, licence key, devices, invoices.">
+<meta property="og:image" content="https://[YOUR-GITHUB-NAME].github.io/kornall-website/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' rx='8' fill='%23123B45'/%3E%3Crect x='28' y='92' width='40' height='40' fill='%23C27A4A'/%3E%3Cpath d='M28 68H92V132M28 36H124V132' fill='none' stroke='%23DCE6E4' stroke-width='16'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+</head>
+<body data-page="account">
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar" role="note"><strong>Demo website.</strong> Purchases, payments and downloads are simulated. Nothing is charged.</div>
+<header class="site-header">
+<div class="wrap">
+<nav class="nav" aria-label="Main">
+<a class="brand" href="index.html"><svg width="30" height="30" viewBox="0 0 160 160" aria-hidden="true" focusable="false"><rect width="160" height="160" rx="4" fill="#123B45"/><rect x="34" y="94" width="32" height="32" fill="#C27A4A"/><path d="M34 79H81V126M34 59H101V126M34 39H121V126" fill="none" stroke="#DCE6E4" stroke-width="10"/></svg><span>kornall</span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+<ul class="nav-links" id="nav-links"><li><a href="index.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="download.html">Download</a></li><li><a href="index.html#faq">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul>
+<div class="nav-actions">
+<a class="btn btn-ghost" href="account.html">Account</a>
+<a class="btn btn-copper" href="trial.html">Start 7-day trial</a>
+</div>
+</nav>
+</div>
+</header>
+<main id="main">
+
+<section class="wrap page-head">
+<h1>Your account</h1>
+<p>Manage your subscription, licence and computers. In this demo, everything is stored in this browser only.</p>
+</section>
+<div class="wrap" style="padding-bottom:96px">
+<div id="no-account" hidden class="panel"><div class="panel-body stack" style="gap:14px">
+<p>You have no subscription in this browser yet.</p>
+<div class="cta-row"><a class="btn btn-copper" href="pricing.html">Choose a plan</a><button class="btn btn-line" type="button" id="sample-order">Load a sample account</button></div>
+</div></div>
+<div id="account" class="stack">
+<p class="notice notice-ok" id="account-msg" role="status" hidden></p>
+<div class="flow" style="padding-bottom:0">
+<div class="stack">
+<section class="panel" aria-labelledby="sub-title">
+<div class="panel-head" id="sub-title">Subscription</div>
+<div class="panel-body">
+<dl class="kv">
+<dt>Plan</dt><dd id="acc-plan"></dd>
+<dt>Status</dt><dd><span class="status status-ok" id="acc-status">Active</span></dd>
+<dt>Price</dt><dd id="acc-price"></dd>
+<dt id="acc-renew-label">Renews on</dt><dd id="acc-renew"></dd>
+<dt>Payment method</dt><dd id="acc-method"></dd>
+<dt>Email</dt><dd id="acc-email"></dd>
+</dl>
+<div class="cta-row" style="margin-top:22px">
+<button class="btn btn-line" type="button" id="switch-yearly">Switch to yearly, save 20%</button>
+<button class="btn btn-danger" type="button" id="cancel-btn">Cancel subscription</button>
+<button class="btn btn-copper" type="button" id="resume-btn" hidden>Resume subscription</button>
+</div>
+</div>
+</section>
+<section class="panel" aria-labelledby="dev-title">
+<div class="panel-head" id="dev-title">Computers</div>
+<div class="panel-body">
+<div id="devices-personal">
+<p class="small muted" id="device-count" style="margin-bottom:8px"></p>
+<p id="device-empty" class="small">No PC activated yet. Enter your licence key in kornall to activate it.</p>
+<ul class="devices" id="device-list"></ul>
+<button class="btn btn-line" type="button" id="add-device" style="margin-top:12px">Simulate activating a PC</button>
+</div>
+<div id="devices-business" hidden>
+<p id="seat-count" style="margin-bottom:10px"></p>
+<div style="height:10px;background:var(--soft);border:1px solid var(--line-2)"><div id="seat-bar" style="height:100%;background:var(--petrol);width:0"></div></div>
+<button class="btn btn-line" type="button" id="assign-seat" style="margin-top:16px">Simulate assigning 10 licences</button>
+</div>
+</div>
+</section>
+</div>
+<div class="stack">
+<section class="panel" aria-labelledby="key-title">
+<div class="panel-head" id="key-title">Licence key</div>
+<div class="panel-body"><div class="keybox"><span id="acc-key"></span><button class="btn btn-line" type="button" id="copy-acc-key">Copy</button></div></div>
+</section>
+<section class="panel" aria-labelledby="inv-title">
+<div class="panel-head" id="inv-title">Invoices</div>
+<div class="panel-body">
+<table class="lines"><tbody><tr><td><a href="invoice.html" id="invoice-row-id">Invoice</a><br><span class="small muted" id="invoice-row-date"></span></td><td id="invoice-row-amount"></td></tr></tbody></table>
+</div>
+</section>
+<button class="btn btn-ghost" type="button" id="reset-demo">Reset this demo account</button>
+</div>
+</div>
+</div>
+</div>
+<div class="overlay" id="cancel-dialog" hidden role="dialog" aria-modal="true" aria-labelledby="cancel-title">
+<div class="dialog">
+<div class="panel-head" id="cancel-title">Cancel your subscription?</div>
+<div class="panel-body">
+<p>kornall keeps working until <strong id="cancel-until"></strong>. After that date, no payment is taken and the app stops applying changes. Your folders are never affected.</p>
+<p class="small muted">You can resume the subscription until that date.</p>
+</div>
+<div class="dialog-actions"><button class="btn btn-line" type="button" id="keep-btn">Keep subscription</button><button class="btn btn-danger" type="button" id="confirm-cancel">Cancel subscription</button></div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-brand"><svg width="24" height="24" viewBox="0 0 160 160" aria-hidden="true" focusable="false"><rect width="160" height="160" rx="4" fill="#1B4C57"/><rect x="34" y="94" width="32" height="32" fill="#C27A4A"/><path d="M34 79H81V126M34 59H101V126M34 39H121V126" fill="none" stroke="#DCE6E4" stroke-width="10"/></svg><strong>kornall</strong><span>© <span data-year>2026</span> <span class="ph">[COMPANY NAME]</span></span></div>
+<nav aria-label="Legal and contact">
+<ul>
+<li><a href="legal.html">Legal notice</a></li>
+<li><a href="terms.html">Terms of sale</a></li>
+<li><a href="eula.html">Licence agreement</a></li>
+<li><a href="privacy.html">Privacy</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+<div class="foot-note">No cookies, no trackers, no analytics on this site. Fonts are served from this site.</div>
+</footer>
+</body>
+</html>

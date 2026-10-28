@@ -1,0 +1,40 @@
+# kornall website (demo)
+
+Static demo website for kornall: home, pricing, 7-day trial, download, checkout, order confirmation, invoice, customer account, contact, legal page templates.
+
+**Demo only.** Payments, downloads, trial keys and the account are simulated in the visitor's browser (localStorage). No data is sent anywhere, there are no cookies, trackers or external requests (fonts are self-hosted).
+
+## Deploy on GitHub Pages (5 minutes)
+
+1. Create a new repository on GitHub, for example `kornall-website` (public, or private with a paid plan).
+2. Upload the contents of this folder to the repository root (drag and drop on github.com → *Add file → Upload files*, or with git):
+   ```bash
+   git init && git add . && git commit -m "kornall demo website"
+   git branch -M main
+   git remote add origin https://github.com/<you>/kornall-website.git
+   git push -u origin main
+   ```
+3. On GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main`, folder `/ (root)` → Save**.
+4. After about a minute the site is live at `https://<you>.github.io/kornall-website/`.
+5. Replace `[YOUR-GITHUB-NAME]` in `robots.txt`, `sitemap.xml` and the `og:image` tags (search the project) with your account name.
+
+No build step: every page is plain HTML, CSS and JavaScript.
+
+## Test the payment flow
+
+- Pricing → *Buy Personal* (yearly or monthly) or *Buy 100/200/300 licences*.
+- Checkout test card: `4242 4242 4242 4242`, any future expiry, any 3 digits. Card `4000 0000 0000 0002` shows a declined payment.
+- After payment: confirmation with a licence key, invoice page, account page (cancel, resume, switch to yearly, activate PCs, assign licences, reset the demo).
+
+## Change prices and texts
+
+- Prices: top of `assets/js/site.js` (`CONFIG`). Business prices are marked "Example price" until `businessIsExample` is set to `false`.
+- Placeholders to fill are highlighted on the pages: `[COMPANY NAME]`, `[PAYMENT PROVIDER]`, `[SIRET]`, etc. Legal pages are templates to have checked by a professional.
+
+## Going live with real payments
+
+Replace the demo checkout with a merchant of record such as Paddle or Lemon Squeezy (they handle EU VAT, invoices and licence keys and work from a static site), host the installer on GitHub Releases, and connect the account page to the provider's customer portal.
+
+## Credits
+
+IBM Plex fonts: SIL Open Font License (`assets/fonts/OFL-IBM-Plex.txt`).
