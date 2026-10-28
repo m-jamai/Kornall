@@ -24,9 +24,9 @@
 <header class="site-header">
 <div class="wrap">
 <nav class="nav" aria-label="Main">
-<a class="brand" href="index.html"><svg width="30" height="30" viewBox="0 0 160 160" aria-hidden="true" focusable="false"><rect width="160" height="160" rx="4" fill="#123B45"/><rect x="34" y="94" width="32" height="32" fill="#C27A4A"/><path d="M34 79H81V126M34 59H101V126M34 39H121V126" fill="none" stroke="#DCE6E4" stroke-width="10"/></svg><span>kornall</span></a>
+<a class="brand" href="index.html" aria-label="kornall home"><svg width="30" height="30" viewBox="0 0 160 160" aria-hidden="true" focusable="false"><rect width="160" height="160" rx="4" fill="#123B45"/><rect x="34" y="94" width="32" height="32" fill="#C27A4A"/><path d="M34 79H81V126M34 59H101V126M34 39H121V126" fill="none" stroke="#DCE6E4" stroke-width="10"/></svg><span>kornall</span></a>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-<ul class="nav-links" id="nav-links"><li><a href="index.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="download.html">Download</a></li><li><a href="index.html#faq">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul>
+<ul class="nav-links" id="nav-links"><li><a href="data-books.html">Data Books</a></li><li><a href="everyone.html">For everyone</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="download.html">Download</a></li><li><a href="contact.html">Contact</a></li></ul>
 <div class="nav-actions">
 <a class="btn btn-ghost" href="account.html">Account</a>
 <a class="btn btn-copper" href="trial.html">Start 7-day trial</a>
@@ -50,8 +50,8 @@
 <div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="email" placeholder="name@company.com" aria-describedby="email-hint"><span class="hint" id="email-hint">Your licence key and invoice are sent here.</span><span class="err" aria-live="polite"></span></div>
 <div class="field"><label for="full-name">Full name</label><input id="full-name" type="text" autocomplete="name"><span class="err" aria-live="polite"></span></div>
 <div class="row2">
-<div class="field" data-biz hidden><label for="company">Company</label><input id="company" type="text" autocomplete="organization"><span class="err" aria-live="polite"></span></div>
-<div class="field" data-biz hidden><label for="vat-id">VAT number <span class="muted">(optional)</span></label><input id="vat-id" type="text" placeholder="FR12345678901" autocomplete="off"><span class="err" aria-live="polite"></span></div>
+<div class="field" data-company hidden><label for="company">Company <span class="muted" id="company-label-opt">(optional)</span></label><input id="company" type="text" autocomplete="organization"><span class="err" aria-live="polite"></span></div>
+<div class="field" data-company hidden><label for="vat-id">VAT number <span class="muted">(optional)</span></label><input id="vat-id" type="text" placeholder="FR12345678901" autocomplete="off"><span class="err" aria-live="polite"></span></div>
 </div>
 <div class="field"><label for="country">Country</label><select id="country" autocomplete="country"><option value="">Choose a country</option><option value="FR" selected>France</option><option value="BE">Belgium</option><option value="LU">Luxembourg</option><option value="DE">Germany</option><option value="ES">Spain</option><option value="IT">Italy</option><option value="NL">Netherlands</option><option value="PT">Portugal</option><option value="IE">Ireland</option><option value="AT">Austria</option><option value="SE">Sweden</option><option value="PL">Poland</option><option value="CH">Switzerland</option><option value="GB">United Kingdom</option><option value="CA">Canada</option><option value="US">United States</option><option value="MA">Morocco</option><option value="TN">Tunisia</option><option value="DZ">Algeria</option><option value="SN">Senegal</option></select><span class="err" aria-live="polite"></span></div>
 </fieldset>
@@ -61,7 +61,7 @@
 <div class="choice">
 <label><input type="radio" name="method" value="card" checked> Card <span class="right">Visa, Mastercard, CB</span></label>
 <label><input type="radio" name="method" value="paypal"> PayPal</label>
-<label data-biz hidden><input type="radio" name="method" value="transfer"> Bank transfer <span class="right">Licences active on receipt</span></label>
+<label data-team hidden><input type="radio" name="method" value="transfer"> Bank transfer <span class="right">Licences active when it arrives</span></label>
 </div>
 </fieldset>
 
@@ -79,7 +79,7 @@
 <fieldset style="margin-top:8px">
 <legend class="sr-only">Agreements</legend>
 <div class="check"><input id="accept-terms" type="checkbox"><label for="accept-terms">I accept the <a href="terms.html">terms of sale</a> and the <a href="eula.html">licence agreement</a>.</label><span class="err" aria-live="polite"></span></div>
-<div class="check" data-personal><input id="accept-waiver" type="checkbox"><label for="accept-waiver">I want my licence immediately and understand that I lose my 14-day right of withdrawal once it is activated.</label><span class="err" aria-live="polite"></span></div>
+<div class="check" id="waiver-row"><input id="accept-waiver" type="checkbox"><label for="accept-waiver">I want my licence immediately and understand that I lose my 14-day right of withdrawal once it is activated.</label><span class="err" aria-live="polite"></span></div>
 </fieldset>
 
 <p class="notice" id="form-error" role="alert" hidden style="background:var(--danger-soft);color:var(--danger);border-color:#efc9c5;margin-bottom:16px"></p>
@@ -93,8 +93,8 @@
 <div class="panel-body">
 <p style="font-weight:600" id="sum-label">kornall Personal</p>
 <p class="small muted" id="sum-detail" style="margin-bottom:16px"></p>
-<div class="field" data-personal><label for="sum-billing">Billing</label><select id="sum-billing"><option value="year">Yearly, €27 (save 20%)</option><option value="month">Monthly, €2.80</option></select></div>
-<div class="field" data-biz hidden><label for="sum-seats">Licences</label><select id="sum-seats"><option value="100">100 seats</option><option value="200">200 seats</option><option value="300">300 seats</option></select></div>
+<div class="field" data-period><label for="sum-billing">Billing</label><select id="sum-billing"></select></div>
+<div class="field" data-team hidden><label for="sum-seats">Users (5 to 50)</label><input id="sum-seats" type="number" min="5" max="50" inputmode="numeric"></div>
 <table class="lines">
 <tbody>
 <tr class="sub"><td>Subtotal excluding VAT</td><td id="sum-net"></td></tr>
@@ -105,7 +105,7 @@
 <p class="small muted" id="sum-recurring" style="margin-top:10px"></p>
 </div>
 </div>
-<ul class="ticks small" style="margin-top:20px"><li>Licence key by email right after payment</li><li>Cancel anytime from your account</li><li>Invoice available in your account</li></ul>
+<ul class="ticks small" style="margin-top:20px"><li>Licence key by email right after payment</li><li>Cancel anytime from your account</li><li>7-day trial available first, <a href="trial.html">no card</a></li><li>Invoice available in your account</li></ul>
 </aside>
 </div>
 <div class="overlay" id="processing" hidden role="dialog" aria-modal="true" aria-labelledby="proc-title">

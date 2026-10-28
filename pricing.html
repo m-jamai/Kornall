@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing | kornall</title>
-<meta name="description" content="kornall pricing: Personal at €27 a year or €2.80 a month for up to 2 PCs, Business packs of 100, 200 or 300 licences, Enterprise on request. 7-day free trial.">
+<meta name="description" content="kornall pricing: Personal €27 a year, Professional €190 a year with the Data Book module, Team €15 per user per month, Enterprise on quote. 7-day free trial.">
 <meta name="theme-color" content="#123B45">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Pricing | kornall">
-<meta property="og:description" content="kornall pricing: Personal at €27 a year or €2.80 a month for up to 2 PCs, Business packs of 100, 200 or 300 licences, Enterprise on request. 7-day free trial.">
+<meta property="og:description" content="kornall pricing: Personal €27 a year, Professional €190 a year with the Data Book module, Team €15 per user per month, Enterprise on quote. 7-day free trial.">
 <meta property="og:image" content="https://[YOUR-GITHUB-NAME].github.io/kornall-website/assets/img/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' rx='8' fill='%23123B45'/%3E%3Crect x='28' y='92' width='40' height='40' fill='%23C27A4A'/%3E%3Cpath d='M28 68H92V132M28 36H124V132' fill='none' stroke='%23DCE6E4' stroke-width='16'/%3E%3C/svg%3E">
@@ -24,9 +24,9 @@
 <header class="site-header">
 <div class="wrap">
 <nav class="nav" aria-label="Main">
-<a class="brand" href="index.html"><svg width="30" height="30" viewBox="0 0 160 160" aria-hidden="true" focusable="false"><rect width="160" height="160" rx="4" fill="#123B45"/><rect x="34" y="94" width="32" height="32" fill="#C27A4A"/><path d="M34 79H81V126M34 59H101V126M34 39H121V126" fill="none" stroke="#DCE6E4" stroke-width="10"/></svg><span>kornall</span></a>
+<a class="brand" href="index.html" aria-label="kornall home"><svg width="30" height="30" viewBox="0 0 160 160" aria-hidden="true" focusable="false"><rect width="160" height="160" rx="4" fill="#123B45"/><rect x="34" y="94" width="32" height="32" fill="#C27A4A"/><path d="M34 79H81V126M34 59H101V126M34 39H121V126" fill="none" stroke="#DCE6E4" stroke-width="10"/></svg><span>kornall</span></a>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-<ul class="nav-links" id="nav-links"><li><a href="index.html">Features</a></li><li><a href="pricing.html" aria-current="page">Pricing</a></li><li><a href="download.html">Download</a></li><li><a href="index.html#faq">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul>
+<ul class="nav-links" id="nav-links"><li><a href="data-books.html">Data Books</a></li><li><a href="everyone.html">For everyone</a></li><li><a href="pricing.html" aria-current="page">Pricing</a></li><li><a href="download.html">Download</a></li><li><a href="contact.html">Contact</a></li></ul>
 <div class="nav-actions">
 <a class="btn btn-ghost" href="account.html">Account</a>
 <a class="btn btn-copper" href="trial.html">Start 7-day trial</a>
@@ -38,59 +38,69 @@
 
 <section class="wrap page-head">
 <h1>Pricing</h1>
-<p>Every plan includes every feature. Start with a free 7-day trial, no card needed.</p>
+<p>Start with a free 7-day trial with all features, no card needed. Then choose the plan that fits your work.</p>
 </section>
 <section class="wrap" aria-label="Plans" style="padding-bottom:56px">
-<div class="billing" role="group" aria-label="Billing period">
-<button type="button" data-billing="year" aria-pressed="true">Yearly <span class="save">save 20%</span></button>
+<div class="billing" role="group" aria-label="Billing period for Personal and Professional">
+<button type="button" data-billing="year" aria-pressed="true">Yearly <span class="save">2 months free</span></button>
 <button type="button" data-billing="month" aria-pressed="false">Monthly</button>
 </div>
-<div class="plans">
-<article class="plan featured">
-<div class="plan-top"><h3>Personal</h3><span class="pill">Most chosen</span></div>
-<p class="who">One person, up to 2 PCs</p>
+<div class="plans plans-4" id="plans">
+<article class="plan">
+<h3>Personal</h3>
+<p class="who">Your own folders, up to 2 PCs</p>
 <p class="price" id="personal-price">€27<small> / year</small></p>
-<p class="note" id="personal-note">That is €2.25 a month, billed once a year</p>
-<a class="btn btn-copper btn-block" id="personal-buy" href="checkout.html?plan=personal&amp;billing=year">Buy Personal</a>
-<p class="under">Or <a href="trial.html">try it free for 7 days</a>, no card needed</p>
+<p class="note" id="personal-note">That is €2.25 a month. VAT included.</p>
+<ul class="ticks"><li>Workspace map and tree editor</li><li>Structured numbering</li><li>Duplicate detection</li><li>One-page state report (WDS)</li></ul>
+<a class="btn btn-line btn-block" id="personal-buy" href="checkout.html?plan=personal&amp;billing=year">Buy Personal</a>
+<p class="under"><a href="everyone.html">What Personal is for</a></p>
+</article>
+<article class="plan featured">
+<div class="plan-top"><h3>Professional</h3><span class="pill">For Data Books</span></div>
+<p class="who">One documentation professional, up to 2 PCs</p>
+<p class="price" id="pro-price">€190<small> / year</small></p>
+<p class="note" id="pro-note">That is €15.83 a month, 2 months free. Excl. VAT.</p>
+<ul class="ticks"><li>Everything in Personal</li><li>Data Book templates and client index import</li><li>Completeness check and progress report</li><li>Final PDF compilation and revisions</li></ul>
+<a class="btn btn-copper btn-block" id="pro-buy" href="checkout.html?plan=professional&amp;billing=year">Buy Professional</a>
+<p class="under">Data Book module in <a href="data-books.html#status">early access</a></p>
 </article>
 <article class="plan">
-<h3>Business</h3>
-<p class="who">Licence packs for teams</p>
-<div class="seats" role="group" aria-label="Number of licences">
-<button type="button" data-seats="100" aria-pressed="true">100 seats</button>
-<button type="button" data-seats="200" aria-pressed="false">200 seats</button>
-<button type="button" data-seats="300" aria-pressed="false">300 seats</button>
-</div>
-<p class="price" id="business-price">€24.00<small> / seat / year</small></p>
-<p class="note"><span id="business-note">100 licences: €2,400.00 a year, excluding VAT</span><span class="example">Example price</span></p>
-<a class="btn btn-line btn-block" id="business-buy" href="checkout.html?plan=business&amp;seats=100">Buy 100 licences</a>
-<p class="under">Invoice with your company VAT number</p>
+<h3>Team</h3>
+<p class="who">5 to 50 users, one shared library</p>
+<p class="price">€15<small> / user / month</small></p>
+<p class="note">Billed yearly. Excl. VAT.</p>
+<label class="stepper-label" for="team-seats">Number of users</label>
+<div class="stepper"><button type="button" id="seat-minus" aria-label="One user less">−</button><input id="team-seats" type="number" min="5" max="50" value="10" inputmode="numeric"><button type="button" id="seat-plus" aria-label="One user more">+</button></div>
+<p class="note" id="team-total" aria-live="polite">10 users: €1,800.00 a year, excl. VAT</p>
+<ul class="ticks"><li>Everything in Professional</li><li>Shared template library</li><li>Licence management and company invoices</li></ul>
+<a class="btn btn-line btn-block" id="team-buy" href="checkout.html?plan=team&amp;seats=10">Buy for 10 users</a>
 </article>
 <article class="plan">
 <h3>Enterprise</h3>
-<p class="who">More than 300 seats or specific needs</p>
-<p class="price">On request</p>
-<p class="note">Custom volume, deployment help, contract terms</p>
+<p class="who">More than 50 users</p>
+<p class="price">On quote</p>
+<p class="note">Volume pricing and contract terms</p>
+<ul class="ticks"><li>Everything in Team</li><li>Deployment help and onboarding</li><li>Templates set up with your clients' indexes</li><li>Purchase order and bank transfer</li></ul>
 <a class="btn btn-line btn-block" href="contact.html?topic=enterprise">Contact sales</a>
 <p class="under">Answer within <span class="ph">[2]</span> business days</p>
 </article>
 </div>
-<p class="small muted" style="margin-top:16px">Prices in euros. Personal prices include VAT; Business prices exclude VAT.</p>
+<p class="small muted" style="margin-top:16px">Prices in euros. Personal prices include VAT; Professional, Team and Enterprise prices exclude VAT.</p>
 </section>
 <section class="wrap" aria-labelledby="compare-title" style="padding-bottom:88px">
 <h2 id="compare-title" style="margin-bottom:20px">Compare plans</h2>
 <div class="table-box" tabindex="0" role="region" aria-label="Plan comparison table">
 <table class="compare">
-<thead><tr><th scope="col" style="width:38%">Feature</th><th scope="col">Personal</th><th scope="col">Business</th><th scope="col">Enterprise</th></tr></thead>
-<tbody><tr><th scope="row">Workspace map and tree editor</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Structured numbering (01.01, A.01)</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Duplicate and version detection</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">WDS report and PDF export</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Saved states and comparison</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Review, history and undo</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Computers</th><td>2 per licence</td><td>1 per seat</td><td>As agreed</td></tr><tr><th scope="row">Team licence management</th><td>—</td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Invoice</th><td>Personal</td><td>Company, with VAT number</td><td>Company, contract</td></tr><tr><th scope="row">Payment</th><td>Card, PayPal</td><td>Card, PayPal, bank transfer</td><td>Bank transfer, purchase order</td></tr><tr><th scope="row">Support</th><td>Email</td><td>Priority email</td><td>Dedicated contact</td></tr></tbody>
+<thead><tr><th scope="col" style="width:34%">Feature</th><th scope="col">Personal</th><th scope="col">Professional</th><th scope="col">Team</th><th scope="col">Enterprise</th></tr></thead>
+<tbody><tr><th scope="row">Workspace map, review, history and undo</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Structured numbering (01.01, A.01)</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Duplicate and version detection</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">One-page state report (WDS)</th><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Data Book templates <span class="badge badge-dev">Early access</span></th><td>—</td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Client index import from Excel <span class="badge badge-dev">Early access</span></th><td>—</td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Completeness check and progress report <span class="badge badge-dev">Early access</span></th><td>—</td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Final PDF compilation <span class="badge badge-dev">Early access</span></th><td>—</td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Revisions of the book <span class="badge badge-dev">Early access</span></th><td>—</td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Shared template library <span class="badge badge-dev">Early access</span></th><td>—</td><td>—</td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Licence management</th><td>—</td><td>—</td><td><span class="yes">Included</span></td><td><span class="yes">Included</span></td></tr><tr><th scope="row">Computers</th><td>2</td><td>2</td><td>1 per user</td><td>As agreed</td></tr><tr><th scope="row">Invoice</th><td>Personal</td><td>Personal or company</td><td>Company, with VAT number</td><td>Company, contract</td></tr><tr><th scope="row">Payment</th><td>Card, PayPal</td><td>Card, PayPal</td><td>Card, PayPal, bank transfer</td><td>Purchase order, bank transfer</td></tr><tr><th scope="row">Support</th><td>Email</td><td>Priority email</td><td>Priority email</td><td>Named contact, onboarding</td></tr></tbody>
 </table>
 </div>
+<p class="small muted" style="margin-top:12px"><span class="badge badge-dev">Early access</span> Released to early-access users first, then to all Professional and Team subscribers at no extra cost.</p>
 </section>
 <section class="section section-alt" aria-labelledby="pfaq-title">
 <div class="wrap" style="max-width:860px">
 <h2 id="pfaq-title" style="margin-bottom:28px">Pricing questions</h2>
-<div class="faq"><details open><summary>How does the trial work?</summary><p>Install kornall and use every feature for 7 days. No card, no automatic payment. When the trial ends, choose a plan to continue.</p></details><details><summary>How do I cancel?</summary><p>From your account, in one click. Monthly plans stop at the end of the paid month, yearly plans at the end of the paid year. No further payment is taken.</p></details><details><summary>Can I switch from monthly to yearly?</summary><p>Yes, from your account. The yearly price applies from your next renewal.</p></details><details><summary>Do prices include VAT?</summary><p>Personal prices include VAT. Business prices exclude VAT; EU companies outside France with a valid VAT number are invoiced without VAT (reverse charge).</p></details><details><summary>Who processes payments?</summary><p><span class="ph">[PAYMENT PROVIDER]</span> processes payments and sends invoices. kornall never sees or stores your card details.</p></details><details><summary>Can I get a refund?</summary><p>Refund and withdrawal conditions are set out in the <a href="terms.html">terms of sale</a>.</p></details></div>
+<div class="faq"><details open><summary>How does the trial work?</summary><p>Install kornall and use every feature for 7 days. No card, no automatic payment. When the trial ends, choose a plan to continue.</p></details><details><summary>Why does Professional cost more than Personal?</summary><p>Professional adds the Data Book module: templates, index import, completeness check, PDF compilation and revisions. It is priced for companies that deliver documentation to their clients.</p></details><details><summary>I buy Professional today. Do I get the Data Book module?</summary><p>Yes. It is delivered as a free update to Professional and Team subscribers. Until then, you use the full kornall workspace.</p></details><details><summary>How does Team billing work?</summary><p>€15 per user per month, billed yearly, from 5 to 50 users. Add users anytime; they are billed pro rata until your renewal date.</p></details><details><summary>How do I cancel?</summary><p>From your account, in one click. The plan stays active until the end of the period already paid. No further payment is taken.</p></details><details><summary>Do prices include VAT?</summary><p>Personal prices include VAT. Professional, Team and Enterprise prices exclude VAT. EU companies outside France with a valid VAT number are invoiced without VAT (reverse charge), and customers outside the EU pay no EU VAT.</p></details><details><summary>Who processes payments?</summary><p><span class="ph">[PAYMENT PROVIDER]</span> processes payments and sends invoices. kornall never sees or stores your card details.</p></details></div>
 </div>
 </section>
 

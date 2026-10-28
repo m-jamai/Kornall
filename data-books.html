@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Books | kornall</title>
+<meta name="description" content="How kornall assembles Data Books, MDRs and handover dossiers: client index import, templates, completeness check, PDF compilation and revisions, offline.">
+<meta name="theme-color" content="#123B45">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Data Books | kornall">
+<meta property="og:description" content="How kornall assembles Data Books, MDRs and handover dossiers: client index import, templates, completeness check, PDF compilation and revisions, offline.">
+<meta property="og:image" content="https://[YOUR-GITHUB-NAME].github.io/kornall-website/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' rx='8' fill='%23123B45'/%3E%3Crect x='28' y='92' width='40' height='40' fill='%23C27A4A'/%3E%3Cpath d='M28 68H92V132M28 36H124V132' fill='none' stroke='%23DCE6E4' stroke-width='16'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+</head>
+<body data-page="databooks">
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar" role="note"><strong>Demo website.</strong> Purchases, payments and downloads are simulated. Nothing is charged.</div>
+<header class="site-header">
+<div class="wrap">
+<nav class="nav" aria-label="Main">
+<a class="brand" href="index.html" aria-label="kornall home"><svg width="30" height="30" viewBox="0 0 160 160" aria-hidden="true" focusable="false"><rect width="160" height="160" rx="4" fill="#123B45"/><rect x="34" y="94" width="32" height="32" fill="#C27A4A"/><path d="M34 79H81V126M34 59H101V126M34 39H121V126" fill="none" stroke="#DCE6E4" stroke-width="10"/></svg><span>kornall</span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+<ul class="nav-links" id="nav-links"><li><a href="data-books.html" aria-current="page">Data Books</a></li><li><a href="everyone.html">For everyone</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="download.html">Download</a></li><li><a href="contact.html">Contact</a></li></ul>
+<div class="nav-actions">
+<a class="btn btn-ghost" href="account.html">Account</a>
+<a class="btn btn-copper" href="trial.html">Start 7-day trial</a>
+</div>
+</nav>
+</div>
+</header>
+<main id="main">
+
+<section class="hero">
+<div class="wrap hero-grid center">
+<div class="hero-copy">
+<p class="eyebrow">Data Book module · early access</p>
+<h1>Every document in its place, before the client checks.</h1>
+<p class="lead">Import the client's index, file documents under it, see what is missing and compile the final book. For MDRs, Data Books, O&amp;M manuals and turnover packages.</p>
+<div class="cta-row"><a class="btn btn-copper" href="early-access.html">Join early access</a><a class="btn btn-on-dark" href="#status">What is available today</a></div>
+</div>
+<div><figure style="margin:0">
+<div class="dbook" role="img" aria-label="Illustration: a Data Book index with 7 sections, 86 of 99 documents received, 13 missing">
+<div class="dbook-head"><strong>MDR · Pump skid P-101</strong><span>Client index rev. C</span></div>
+<table><thead><tr><th>No.</th><th>Section</th><th class="hide-s">Progress</th><th style="text-align:right">Docs</th><th>Status</th></tr></thead><tbody><tr><td class="n">01</td><td>Certificates of conformity</td><td class="hide-s"><div class="bar"><i class="" style="width:100%"></i></div></td><td class="c">12/12</td><td><span class="st st-ok">Complete</span></td></tr><tr><td class="n">02</td><td>Material certificates (3.1)</td><td class="hide-s"><div class="bar"><i class="part" style="width:89%"></i></div></td><td class="c">41/46</td><td><span class="st st-miss">5 missing</span></td></tr><tr><td class="n">03</td><td>Welding: WPS, PQR, welder qualifications</td><td class="hide-s"><div class="bar"><i class="" style="width:100%"></i></div></td><td class="c">18/18</td><td><span class="st st-ok">Complete</span></td></tr><tr><td class="n">04</td><td>NDT reports</td><td class="hide-s"><div class="bar"><i class="part" style="width:64%"></i></div></td><td class="c">9/14</td><td><span class="st st-miss">5 missing</span></td></tr><tr><td class="n">05</td><td>Pressure test reports</td><td class="hide-s"><div class="bar"><i class="" style="width:100%"></i></div></td><td class="c">2/2</td><td><span class="st st-ok">Complete</span></td></tr><tr><td class="n">06</td><td>Painting and coating</td><td class="hide-s"><div class="bar"><i class="part" style="width:0%"></i></div></td><td class="c">0/3</td><td><span class="st st-miss">3 missing</span></td></tr><tr><td class="n">07</td><td>Dimensional reports</td><td class="hide-s"><div class="bar"><i class="" style="width:100%"></i></div></td><td class="c">4/4</td><td><span class="st st-ok">Complete</span></td></tr></tbody></table>
+<div class="dbook-foot"><div><div class="big">87%</div><div class="small">86 of 99 documents in place</div></div><div class="small">13 missing · 1 superseded revision · 2 duplicates</div></div>
+</div><span class="illus">Illustration of the Data Book module, in development</span>
+</figure></div>
+</div>
+</section>
+
+<section class="section" aria-labelledby="what-title">
+<div class="wrap">
+<div class="split" style="align-items:start">
+<div>
+<h2 id="what-title">What a Data Book is</h2>
+<p>When a manufacturer delivers equipment, it hands over the proof that it was built as specified: certificates, material traceability, welding and inspection records, test reports and drawings. The client decides the index, the numbering and the format. The book is checked, and the last payment often waits for it.</p>
+<p style="margin-top:14px">Different industries call it a Manufacturing Data Record (MDR), Data Book, Final Documentation, Quality Dossier or Turnover Package. The work is the same: collect, number, check, compile.</p>
+</div>
+<div class="table-box" tabindex="0" role="region" aria-label="Typical Data Book contents">
+<table class="compare contents">
+<caption class="sr-only">Typical contents of a manufacturing Data Book</caption>
+<thead><tr><th scope="col">No.</th><th scope="col">Section</th><th scope="col">Typical documents</th></tr></thead>
+<tbody><tr><td>01</td><th scope="row">Index and cover</th><td>Client index, document register, cover page</td></tr><tr><td>02</td><th scope="row">Certificates of conformity</th><td>Declaration of conformity, CE / PED or ASME documentation, nameplate</td></tr><tr><td>03</td><th scope="row">Material certificates</th><td>Mill certificates (EN 10204 3.1 / 3.2), material traceability</td></tr><tr><td>04</td><th scope="row">Welding</th><td>Welding procedures (WPS), qualification records (PQR), welder qualifications, weld map</td></tr><tr><td>05</td><th scope="row">Non-destructive testing</th><td>RT, UT, MT, PT reports and NDT personnel certificates</td></tr><tr><td>06</td><th scope="row">Tests</th><td>Hydrostatic or pressure test reports, functional and factory acceptance tests</td></tr><tr><td>07</td><th scope="row">Surface treatment</th><td>Painting, coating, galvanizing reports</td></tr><tr><td>08</td><th scope="row">Dimensional and final inspection</th><td>Dimensional reports, release notes, inspection certificates</td></tr><tr><td>09</td><th scope="row">Drawings</th><td>As-built general arrangement and detail drawings</td></tr></tbody>
+</table>
+</div>
+</div>
+<p class="small muted" style="margin-top:12px">Typical example. The real index always comes from the client's specification.</p>
+</div>
+</section>
+
+<section class="section section-alt" aria-labelledby="tpl-title">
+<div class="wrap">
+<div class="section-head"><h2 id="tpl-title">Start from the client's index, or from a template</h2><p>Paste or import the index from Excel: numbers, titles and required documents become the structure of the book. Or begin with a template and adapt it.</p></div>
+<div class="cards" style="background:var(--white)"><article class="card"><span class="k">Template</span><h3>MDR / Data Book</h3><p>Manufacturing record for equipment and fabrications.</p></article><article class="card"><span class="k">Template</span><h3>Final documentation dossier</h3><p>The European name for the same handover file.</p></article><article class="card"><span class="k">Template</span><h3>O&amp;M manual</h3><p>Operation and maintenance documentation for the end user.</p></article><article class="card"><span class="k">Template</span><h3>Turnover package</h3><p>System-by-system handover at the end of construction.</p></article><article class="card"><span class="k">Template</span><h3>As-built package</h3><p>Final drawings and records after commissioning.</p></article><article class="card"><span class="k">Template</span><h3>Quality dossier</h3><p>Inspection and test plan with its records.</p></article></div>
+</div>
+</section>
+
+<section class="section" aria-labelledby="check-title">
+<div class="wrap">
+<div class="split">
+<div>
+<h2 id="check-title">Know what is missing, every day</h2>
+<p>Each section shows how many documents are in place against what the index requires. Missing, duplicated and superseded documents are listed by name, so you can chase the right supplier the same day.</p>
+<ul class="ticks"><li>Completeness per section and for the whole book</li><li>Superseded revisions flagged, never deleted for you</li><li class="copper">Progress report on one page, for the client or your manager</li></ul>
+</div>
+<div><figure style="margin:0">
+<div class="dbook" role="img" aria-label="Illustration: a Data Book index with 7 sections, 86 of 99 documents received, 13 missing">
+<div class="dbook-head"><strong>MDR · Pump skid P-101</strong><span>Client index rev. C</span></div>
+<table><thead><tr><th>No.</th><th>Section</th><th class="hide-s">Progress</th><th style="text-align:right">Docs</th><th>Status</th></tr></thead><tbody><tr><td class="n">01</td><td>Certificates of conformity</td><td class="hide-s"><div class="bar"><i class="" style="width:100%"></i></div></td><td class="c">12/12</td><td><span class="st st-ok">Complete</span></td></tr><tr><td class="n">02</td><td>Material certificates (3.1)</td><td class="hide-s"><div class="bar"><i class="part" style="width:89%"></i></div></td><td class="c">41/46</td><td><span class="st st-miss">5 missing</span></td></tr><tr><td class="n">03</td><td>Welding: WPS, PQR, welder qualifications</td><td class="hide-s"><div class="bar"><i class="" style="width:100%"></i></div></td><td class="c">18/18</td><td><span class="st st-ok">Complete</span></td></tr><tr><td class="n">04</td><td>NDT reports</td><td class="hide-s"><div class="bar"><i class="part" style="width:64%"></i></div></td><td class="c">9/14</td><td><span class="st st-miss">5 missing</span></td></tr><tr><td class="n">05</td><td>Pressure test reports</td><td class="hide-s"><div class="bar"><i class="" style="width:100%"></i></div></td><td class="c">2/2</td><td><span class="st st-ok">Complete</span></td></tr><tr><td class="n">06</td><td>Painting and coating</td><td class="hide-s"><div class="bar"><i class="part" style="width:0%"></i></div></td><td class="c">0/3</td><td><span class="st st-miss">3 missing</span></td></tr><tr><td class="n">07</td><td>Dimensional reports</td><td class="hide-s"><div class="bar"><i class="" style="width:100%"></i></div></td><td class="c">4/4</td><td><span class="st st-ok">Complete</span></td></tr></tbody></table>
+<div class="dbook-foot"><div><div class="big">87%</div><div class="small">86 of 99 documents in place</div></div><div class="small">13 missing · 1 superseded revision · 2 duplicates</div></div>
+</div><span class="illus">Illustration of the Data Book module, in development</span>
+</figure></div>
+</div>
+<div class="split">
+<div class="cards">
+<article class="card"><span class="k">Cover</span><h3>Your title page</h3><p>Project, client, equipment tag, purchase order and revision.</p></article>
+<article class="card"><span class="k">Contents</span><h3>Clickable table of contents</h3><p>Generated from the index, linked to each section.</p></article>
+<article class="card"><span class="k">Bookmarks</span><h3>Navigation in any reader</h3><p>One bookmark per section and per document.</p></article>
+<article class="card"><span class="k">Pages</span><h3>Page numbers</h3><p>Stamped through the whole book, with the revision.</p></article>
+</div>
+<div>
+<h2>Compile the final book in one click</h2>
+<p>kornall merges every document in index order into one PDF, with cover, table of contents, bookmarks and page numbers. When the client asks for revision B, change the documents and compile again.</p>
+<ul class="ticks"><li>Revisions A, B, C with the list of what changed</li><li class="copper">Everything runs on your PC, even for large books</li></ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section section-alt" id="status" aria-labelledby="status-title">
+<div class="wrap" style="max-width:960px">
+<div class="section-head"><h2 id="status-title">What is available today</h2><p>We say clearly what you can use now and what is coming. The Data Book module is released to early-access users first, then to every Professional and Team subscriber at no extra cost.</p></div>
+<div class="table-box" tabindex="0" role="region" aria-label="Feature availability">
+<table class="compare" style="background:var(--white)">
+<thead><tr><th scope="col" style="width:75%">Feature</th><th scope="col">Status</th></tr></thead>
+<tbody><tr><th scope="row">Workspace map, staged moves, review, undo</th><td><span class="badge badge-now">Available</span></td></tr><tr><th scope="row">Structured numbering (01.01, A.01)</th><td><span class="badge badge-now">Available</span></td></tr><tr><th scope="row">Duplicate and version detection</th><td><span class="badge badge-now">Available</span></td></tr><tr><th scope="row">One-page state report (WDS), PDF export</th><td><span class="badge badge-now">Available</span></td></tr><tr><th scope="row">Data Book templates</th><td><span class="badge badge-dev">Early access</span></td></tr><tr><th scope="row">Client index import from Excel</th><td><span class="badge badge-dev">Early access</span></td></tr><tr><th scope="row">Completeness check and progress report</th><td><span class="badge badge-dev">Early access</span></td></tr><tr><th scope="row">Final PDF compilation: cover, table of contents, bookmarks, page numbers</th><td><span class="badge badge-dev">Early access</span></td></tr><tr><th scope="row">Revisions of the book (rev A, B, C) and change list</th><td><span class="badge badge-dev">Early access</span></td></tr><tr><th scope="row">Shared template library for teams</th><td><span class="badge badge-dev">Early access</span></td></tr></tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section class="section" aria-labelledby="dbfaq-title">
+<div class="wrap" style="max-width:860px">
+<h2 id="dbfaq-title" style="margin-bottom:28px">Questions about Data Books</h2>
+<div class="faq"><details open><summary>Does kornall follow a specific standard?</summary><p>Data Book contents are set by each client and each project. kornall does not impose a structure: you import the client's own index, or start from a template and adapt it.</p></details><details><summary>Which file types can go into the book?</summary><p>Any file can be filed and checked. For the compiled PDF, PDF documents are merged directly; other formats are listed in the index so nothing is forgotten.</p></details><details><summary>Can several people work on the same book?</summary><p>With the Team plan, templates are shared across the team. Each person works on files on their PC or on a shared network drive.</p></details><details><summary>How do I get the Data Book module?</summary><p>Join the early access. Professional and Team subscribers receive it as a free update when it is released.</p></details></div>
+</div>
+</section>
+
+<section class="band" aria-label="Early access">
+<div class="wrap">
+<div><h2>Help shape the Data Book module</h2><p>Early-access users test it on real projects and tell us what their clients require.</p></div>
+<div class="cta-row"><a class="btn btn-copper" href="early-access.html">Join early access</a><a class="btn btn-on-dark" href="pricing.html">See pricing</a></div>
+</div>
+</section>
+
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-brand"><svg width="24" height="24" viewBox="0 0 160 160" aria-hidden="true" focusable="false"><rect width="160" height="160" rx="4" fill="#1B4C57"/><rect x="34" y="94" width="32" height="32" fill="#C27A4A"/><path d="M34 79H81V126M34 59H101V126M34 39H121V126" fill="none" stroke="#DCE6E4" stroke-width="10"/></svg><strong>kornall</strong><span>© <span data-year>2026</span> <span class="ph">[COMPANY NAME]</span></span></div>
+<nav aria-label="Legal and contact">
+<ul>
+<li><a href="legal.html">Legal notice</a></li>
+<li><a href="terms.html">Terms of sale</a></li>
+<li><a href="eula.html">Licence agreement</a></li>
+<li><a href="privacy.html">Privacy</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+<div class="foot-note">No cookies, no trackers, no analytics on this site. Fonts are served from this site.</div>
+</footer>
+</body>
+</html>
